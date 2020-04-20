@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <body style="background-color:lightgrey;">
+        <title>Automobile Information</title>
+
+            <h1>Welcome to Andy's Page</h1>
+            <h2>Below are current automobile information that exists</h2>
+            <div id="entries">
+
+            </div>
+            <h2> Enter automobile ID Number Below</h2>
+            <form>
+                <label for="ID">ID</label>
+                <textarea id="ID"></textarea>
+
+                <button id='submitButton'>Submit</button>
+            </form>
+
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+            <script type="text/javascript">
+            var API='https://pb3h1hcym5.execute-api.us-east-1.amazonaws.com/dev/entries';
+            $('#submitButton').on('click', function(){   
+            $(document).ready(function(){
+                    $.ajax({
+                        type:'GET',
+                        url: API,
+
+                        success: function(data){
+                            $('#entries').html('');
+
+                            data.Items.forEach(function(automobileItem){
+                                $('#entries').append('<p>' + ' ' + automobileItem.ID + ' => ' + automobileItem.color + ' '   + automobileItem.year + ' '   + automobileItem.make + ' '  +    automobileItem.model +'<p>');
+                            })
+                        }
+                    });
+                });
+
+                return false;
+                        
+                    });
+
+                    
+                
+            </script>
+        </body>
+    </head>
+</html>
