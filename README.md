@@ -15,7 +15,7 @@ Permissions => Bucket Policy => Copy S3policy.json to the policy editor
    
 3. Zip up writedb.js and readdb.js 
 
-4. Copy the writedb.zip and readdb.zip to s3 bucket *(aws s3 /path_to_zipfiles/ s3://<bucket_name> --recursive)
+4. Copy the writedb.zip and readdb.zip to s3 bucket *(aws s3 /path_to_zipfiles/ s3://<bucket_name> --recursive)*
 
 3. create the Database. You can use 2 options depending on your preference. 
   i. Use the cloudformation Stack: (aws cloudformation create-stack --stack-name <stackname> --template-url s3://<bucket_name>/dynamodb.yml
