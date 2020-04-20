@@ -1,0 +1,29 @@
+{
+  "AWSTemplateFormatVersion" : "2010-09-09",
+  "Resources" : {
+    "autoDynamodbTable" : {
+      "Type" : "AWS::DynamoDB::Table",
+      "Properties" : {
+        "AttributeDefinitions" : [
+          {
+            "AttributeName" : "ID",
+            "AttributeType" : "N"   
+          }
+
+        ],
+        "KeySchema" : [
+          {
+            "AttributeName" : "ID",
+            "KeyType" : "HASH"
+          }
+                   
+        ],
+        "ProvisionedThroughput" : {
+          "ReadCapacityUnits" : "5",
+          "WriteCapacityUnits" : "5"
+        },
+        "TableName" : "automobile1"
+      }
+    }
+  }
+}
