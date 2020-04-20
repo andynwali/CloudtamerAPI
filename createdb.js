@@ -24,7 +24,7 @@ var tableParams = {
     ReadCapacityUnits: 5,
     WriteCapacityUnits: 5
   },
-  TableName: 'automobiles1',
+  TableName: 'automobiles',
   StreamSpecification: {
     StreamEnabled: false
   }
