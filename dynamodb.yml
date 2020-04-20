@@ -22,7 +22,7 @@
           "ReadCapacityUnits" : "5",
           "WriteCapacityUnits" : "5"
         },
-        "TableName" : "automobile1"
+        "TableName" : "automobile"
       }
     }
   }
