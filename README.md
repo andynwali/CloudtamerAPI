@@ -1,6 +1,5 @@
 # CloudtamerAPI
-
-#resources used
+resources used
 - AWS S3
 - Lambda
 - DynamoDB
