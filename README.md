@@ -16,10 +16,10 @@ STEPS
 Permissions => Bucket Policy => Copy S3policy.json to the policy editor
 
 2. add the index.html and createdb.yml files to the S3 bucket. (aws s3 cp /path/index.html s3://<bucket_name/index.html)
-   (aws s3 cp /path/createdb.yml s3://<bucket_name/createdb.yml)
+   (aws s3 cp /path/createdb.yml s3://<bucket_name/dynamodb.yml)
 
 3. create the Database. You can use 2 options depending on your preference. 
-  i. Use the cloudformation Stack: aws cloudformation create-stack --stack-name <stackname> --template-url s3://<bucket_name>/createdb.yml
+  i. Use the cloudformation Stack: aws cloudformation create-stack --stack-name <stackname> --template-url s3://<bucket_name>/dynamodb.yml
   
   4. 
   
