@@ -26,5 +26,6 @@ Permissions => Bucket Policy => Copy S3policy.json to the policy editor
 
 
   # Upcoming Changes
-remove datasets from js files
-data to be filtered based on user input on search box
+- remove datasets from js files
+- data to be filtered based on user input on search box
+- include validate that confirms if user enters an invalid ID
